@@ -1,3 +1,5 @@
+/* Program which creates web server using express*/
+
 //Importing express
 const express = require("express");
 const http = require("http");
@@ -5,19 +7,23 @@ const http = require("http");
 //Inside the variable app, we're storing all express modules
 const app = express();
 
-//Handling GET method for different urls using express
+//Handling GET routes  for different urls using express
 app.get("/", (req, res) => {
   return res.send("Hello From home Page");
 });
 
 app.get("/about", (req, res) => {
-  return res.send("hello from About Page");
+  return res.send(
+    "hello from About Page" +
+      "\tHi\t" +
+      req.query.name +
+      "\tYou are :" +
+      req.query.age +
+      "\tyears old!"
+  );
 });
 
-//Creating http server using express
-const server = http.createServer(app);
-
-// Listening when server is created
-server.listen(3000, () => {
-  console.log("Server Started !!");
+//Creating server using express
+app.listen(3000, () => {
+  console.log("Server Started");
 });
