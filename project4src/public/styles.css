@@ -1,0 +1,9 @@
+.heading {
+  color: red;
+  background-color: white;
+}
+
+.heading:hover {
+  color: white;
+  background-color: black;
+}
