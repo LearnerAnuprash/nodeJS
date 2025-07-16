@@ -1,0 +1,15 @@
+{
+  "name": "project5src",
+  "version": "1.0.0",
+  "description": "This is another practice project ",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
+  "author": "Anuprash Subedi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "~5.1.0"
+  }
+}
